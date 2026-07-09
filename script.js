@@ -128,3 +128,24 @@ futureBtn.addEventListener("click", () => {
 closeFuture.addEventListener("click", () => {
   futureModal.classList.remove("open");
 });
+const fotos = document.querySelectorAll(".photo-wall img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeLightbox = document.getElementById("closeLightbox");
+
+fotos.forEach((foto) => {
+  foto.addEventListener("click", () => {
+    lightboxImg.src = foto.src;
+    lightbox.classList.add("open");
+  });
+});
+
+closeLightbox.addEventListener("click", () => {
+  lightbox.classList.remove("open");
+});
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove("open");
+  }
+});

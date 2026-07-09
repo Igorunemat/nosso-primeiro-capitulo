@@ -640,3 +640,71 @@ body {
     padding: 30px;
   }
 }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  z-index: 99998;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.6);
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    font-size: .85rem;
+    padding: 14px 24px;
+  }
+
+  .book-page h2 {
+    font-size: 3.3rem;
+  }
+
+  .book-page p {
+    font-size: 1.05rem;
+  }
+
+  .photo-wall img {
+    height: 360px;
+  }
+
+  .counter {
+    grid-template-columns: 1fr;
+  }
+}
