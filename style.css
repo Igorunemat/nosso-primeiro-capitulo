@@ -150,6 +150,7 @@ body {
   letter-spacing: 4px;
   color: var(--gold);
   border-color: var(--gold);
+  transform: translateY(-4px);
 }
 
 .page {
@@ -707,4 +708,35 @@ body {
   .counter {
     grid-template-columns: 1fr;
   }
+}.scroll-hint {
+  margin-top: 28px;
+  font-size: .75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: .75;
+  animation: pulseHint 2s infinite;
+}
+
+@keyframes pulseHint {
+  0%, 100% {
+    opacity: .35;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: .9;
+    transform: translateY(8px);
+  }
+}
+
+.book-page {
+  scroll-snap-align: start;
+}
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+.hero {
+  scroll-snap-align: start;
 }
