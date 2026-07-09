@@ -739,4 +739,62 @@ html {
 
 .hero {
   scroll-snap-align: start;
+}.life-line {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 120px 8%;
+  text-align: center;
+}
+
+.life-line span {
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: .78rem;
+}
+
+.life-line h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin: 30px auto 70px;
+  max-width: 900px;
+}
+
+.life-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  position: relative;
+}
+
+.life-item {
+  background: white;
+  border: 1px solid rgba(157,123,53,.18);
+  border-radius: 28px;
+  padding: 35px 25px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.07);
+  transition: .35s;
+}
+
+.life-item:hover {
+  transform: translateY(-10px);
+}
+
+.life-item strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+
+.life-item p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+  .life-track {
+    grid-template-columns: 1fr;
+  }
 }
